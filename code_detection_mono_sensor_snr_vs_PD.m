@@ -3,7 +3,7 @@ clear all;
 fs=200;
 M=1;
 n=0:127;
-N_S=10000;
+N_S=500;
 addpath('D:\tfsa_5-5\windows\win64_bin');
 P=0;
 Q=0;
@@ -17,7 +17,7 @@ T1 = zeros(1,N_S);
 T2 = zeros(1,N_S);
 T3 = zeros(1,N_S);
 T4 = zeros(1,N_S);
-for SNR=-10:2:4
+for SNR=-6:2:4
     llll=llll+1;
     
     s=exp(2*pi*1i*(0.48*n-0*0.2*n.^2/(2*128)-1.5*0.4*n.^3/(128*128*3)));%+exp(2*pi*1i*(0.3*n-0*0.2*n.^2/(2*128)-0.3*n.^3/(128*128*3)));
@@ -171,7 +171,7 @@ for SNR=-10:2:4
         end
     end
 end
-SNR=-10:2:4;
+SNR=-6:2:4;
 %SNR=-6:2:-4;
 plot(SNR,PDD1,'o-');
 hold on;
